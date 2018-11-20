@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd ">
+	<!-- spring的后端控制器 -->
+	<!-- 使用spring的组建扫描器，装配包下的所有的controller -->
+	<context:component-scan base-package="com.zjh.mypage.controller">
+	</context:component-scan>
+	<!-- 注解驱动 conversion-service="conversionService" -->
+	<!-- 这里的conversion-service表示转换器，在下边使用bean配置转换器 -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<!-- 配置视图解析器 -->
+	<!-- 要求将jstl加到classpath中 prefix:代表请求url的前缀 suffix:代表请求的url后缀 设置了这两个属性值之后，在controller中进行代码开发时返回的 
+		modelandview对象设置的页面路径就不需要带前缀名和后缀名了 -->
+	<mvc:default-servlet-handler/>
+</beans>
