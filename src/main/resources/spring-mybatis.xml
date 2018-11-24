@@ -72,7 +72,7 @@
 	</bean>
 	<!-- 配置自动装配扫描Mapper -->
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com/zjh/mypage/mapper"></property>
+		<property name="basePackage" value="com.zjh.mypage.mapper"></property>
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 </beans>
