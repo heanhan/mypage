@@ -5,6 +5,13 @@
 	<artifactId>mypage</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
+		<!-- 分页的依赖 -->
+		<!--引入pageHelper分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>5.0.0</version>
+		</dependency>
 		<!-- 添加spring、springMVC的依赖jar包 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
